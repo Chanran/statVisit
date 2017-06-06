@@ -1,9 +1,14 @@
 var schedule = require('node-schedule');
-var exec = require('child_process').exec;
+var shell = require('shelljs');
+var moment = require('moment');
 
 function scheduleCronstyle() {
-  schedule.scheduleJobs('30 * * * * *', function() {
-    console.log('object');
+  // 每天24点执行一次
+  schedule.scheduleJob('0 24 * * * *', function() {
+    var today = moment().format('YYYYMMDD');
+    var logfile = './log/' + today + '.log';
+    // 上传log文件到hdfs
+    shell.exec('hdfs dfs -put ' + logfile + ' /log/');
   });
 }
 
