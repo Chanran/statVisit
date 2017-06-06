@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    script(src="/jquery/dist/jquery.min.js")
+    script(src="/bootstrap/dist/js/bootstrap.min.js")
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          span.navbar-brand 电影推荐
+        #navbar.navbar-collapse.collapse
+          .nav.navbar-nav
+            li
+              a(href='/index') 电影列表
+            li
+              a(href="/output") 排序结果
+    block content
