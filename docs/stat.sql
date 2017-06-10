@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017-06-10 12:46:15
+-- Generation Time: 2017-06-10 19:38:00
 -- 服务器版本： 5.7.17-0ubuntu0.16.04.1
 -- PHP Version: 5.6.30-7+deb.sury.org~xenial+1
 
@@ -34,6 +34,18 @@ CREATE TABLE `log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- 转存表中的数据 `log`
+--
+
+INSERT INTO `log` (`id`, `ip`, `log_text`, `time`) VALUES
+(1, '172.16.35.146', '::ffff:172.16.36.81 click id=8 name=海上钢琴声 at 2017-06-05 23:50:15', '2017-06-01 00:00:00'),
+(2, '172.16.36.81', '::ffff:172.16.36.81 click 2 加勒比海盗 2017-06-05 23:45:41', '2017-06-02 00:00:00'),
+(3, '172.16.36.81', '::ffff:172.16.36.81 click id=8 name=海上钢琴声 at 2017-06-05 23:50:15', '2017-06-01 06:18:22'),
+(4, '172.16.36.81', '::ffff:172.16.36.81 click id=8 name=海上钢琴声 at 2017-06-05 23:50:15', '2017-06-01 10:25:31'),
+(5, '172.16.36.16', '::ffff:172.16.36.81 click id=8 name=海上钢琴声 at 2017-06-05 23:50:15', '2017-06-01 08:25:20'),
+(6, '172.16.36.16', '::ffff:172.16.36.81 click id=8 name=海上钢琴声 at 2017-06-05 23:50:15', '2017-06-02 08:20:29');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -51,7 +63,7 @@ ALTER TABLE `log`
 -- 使用表AUTO_INCREMENT `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'log id';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'log id', AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
