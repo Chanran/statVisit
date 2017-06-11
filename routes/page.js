@@ -5,7 +5,7 @@ var router = express.Router();
 var mysql = require('mysql');
 var dbConfig = require('../db/dbConfig');
 var pageSQL = require('../db/pagesql');
-// 使用DBConfig.js的配置信息创建一个MySQL连接池
+// 使用dbConfig.js的配置信息创建一个MySQL连接池
 var pool = mysql.createPool(dbConfig.mysql);
 
 router.get('/', function (req, res, next) {
